@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+:root{
+    --White: hsl(0, 100%, 100%);
+    --Purple-100: hsl(275, 100%, 97%);
+    --Purple-600: hsl(292, 16%, 49%);
+    --Purple-950: hsl(292, 42%, 14%);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url(background-pattern-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+}
+
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover{
+    color: purple;
+}
+
+.container{
+    background-color: white;
+    max-width: 700px;
+    margin: 1rem;
+    padding:1.5rem ;
+    border-radius: 1rem;
+}
+
+.faq-headline{
+    display: flex;
+    gap: 2rem;
+}
+
+.faq-headline h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.accordian-container .accordian-item:not(:last-child){
+    border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+
+.accordian-item .icons img{
+    min-width: 30px;
+}
+
+.accordian-item .icons .minus-icon{
+    display: none;
+}
+
+.accordian-description{
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+
+.accordian-description p{
+    color: hsl(292, 42%, 14%);
+    padding: 1.5rem 0;
+}
+
+@media (max-width:540px) {
+    body{
+        background-image: url(background-pattern-mobile.svg);
+    }
+}
+
