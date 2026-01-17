@@ -1,5 +1,7 @@
 const accordianBtns = document.querySelectorAll('.accordian-btn')
 
+
+// Apply the loop to iterate the every single item
 accordianBtns.forEach(btn => {
     btn.addEventListener('click', function(){
         this.classList.toggle('active')
@@ -18,5 +20,6 @@ accordianBtns.forEach(btn => {
         minusIcon.style.display = 'block'
     }
     })
+
 
 })
